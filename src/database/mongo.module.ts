@@ -6,7 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
     MongooseModule.forRootAsync({
       connectionName: 'auth',
       useFactory: () => ({
-        uri: 'mongodb+srv://root:1234@cluster0-ecrci.mongodb.net/auth?retryWrites=true&w=majority',
+        uri: 'Dirección de MONGO#1',
         useUnifiedTopology: true,
         useNewUrlParser: true,
       }),
@@ -14,7 +14,7 @@ import { MongooseModule } from '@nestjs/mongoose';
     MongooseModule.forRootAsync({
       connectionName: 'products',
       useFactory: () => ({
-        uri: 'mongodb+srv://root:1234@cluster0-ecrci.mongodb.net/products?retryWrites=true&w=majority',
+        uri: 'Dirección de MONGO#2',
         useUnifiedTopology: true,
         useNewUrlParser: true,
       }),
