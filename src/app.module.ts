@@ -4,8 +4,16 @@ import { MongoModule } from './database/mongo.module';
 import { AuthModule } from './auth/auth.module';
 import { AuthController } from './auth/auth.controller';
 
+import { ConfigModule } from '@nestjs/config';
+
 @Module({
-  imports: [ApiModule, MongoModule, AuthModule],
+  imports: [
+    ConfigModule.forRoot(
+      { isGlobal: true },
+    ),
+    ApiModule,
+    MongoModule,
+    AuthModule],
   controllers: [AuthController],
 })
 export class AppModule { }
